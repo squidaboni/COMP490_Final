@@ -58,10 +58,10 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
         # visual objects
         self.frame_big = StdFrame(self.height - 5, self.width)
         self.frame_small = se.Frame(height=4, width=self.width, state="float")
-        self.e_underline = se.Text("----------------+", state="float")
-        self.e_sideline = se.Square("|", 1, 3, state="float")
-        self.p_upperline = se.Text("+----------------", state="float")
-        self.p_sideline = se.Square("|", 1, 4, state="float")
+        self.e_underline = se.Text("─" * 16 + "┘", state="float")
+        self.e_sideline = se.Square("│", 1, 3, state="float")
+        self.p_upperline = se.Text("┌" + "─" * 16, state="float")
+        self.p_sideline = se.Square("│", 1, 3, state="float")
         self.outp = OutP("", state="float")
         self.label_attack = HightlightableText(
             f"{Action.CHOOSE_ATTACK.mapping}: Attack", state="float"
