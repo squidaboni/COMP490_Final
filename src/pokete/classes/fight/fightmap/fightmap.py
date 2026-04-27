@@ -15,7 +15,7 @@ from pokete.base.input_loops import ask_bool
 from pokete.base.mouse import MouseInteractor
 from pokete.base.tss import tss
 from pokete.base.ui import Overview
-from pokete.base.ui.elements import StdFrame2
+from pokete.base.ui.elements import StdFrame
 from pokete.base.ui.elements.text import HightlightableText
 from pokete.classes import animations, deck
 from pokete.classes.asset_service.service import asset_service
@@ -56,7 +56,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
   |__O__|
   \_____/""")
         # visual objects
-        self.frame_big = StdFrame2(self.height - 5, self.width, state="float")
+        self.frame_big = StdFrame(self.height - 5, self.width)
         self.frame_small = se.Frame(height=4, width=self.width, state="float")
         self.e_underline = se.Text("----------------+", state="float")
         self.e_sideline = se.Square("|", 1, 3, state="float")
