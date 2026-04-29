@@ -114,25 +114,28 @@ class Deck(BetterChooseBoxView):
                     if len(self.pokes) == 0:
                         continue
                     if not self.indici:
-                        self.indici.append(
-                            self.index[0] * self.columns + self.index[1])
+                        self.indici.append(self.index[0] * self.columns + self.index[1])
                     else:
-                        self.indici.append(
-                            self.index[0] * self.columns + self.index[1])
+                        self.indici.append(self.index[0] * self.columns + self.index[1])
                         (
                             self.figure.pokes[self.indici[0]],
                             self.figure.pokes[self.indici[1]],
-                        ) = self.pokes[self.indici[1]], self.pokes[
-                            self.indici[0]]
+                        ) = (
+                            self.pokes[self.indici[1]],
+                            self.pokes[self.indici[0]],
+                        )
                         self.pokes = self.figure.pokes[:p_len]
                         self.indici = []
-                        self.set_items(2,
-                                       [se.Text(p.name, state="float") for p in
-                                        self.pokes])
+                        self.set_items(
+                            2, [se.Text(p.name, state="float") for p in self.pokes]
+                        )
                 elif action.triggers(Action.FREE_POKETE):
-                    if self.pokes[
-                        self.index[0] * self.columns + self.index[
-                            1]].identifier == "__fallback__":
+                    if (
+                        self.pokes[
+                            self.index[0] * self.columns + self.index[1]
+                        ].identifier
+                        == "__fallback__"
+                    ):
                         pass
                     elif (
                         len(
@@ -152,14 +155,12 @@ class Deck(BetterChooseBoxView):
                                        self.index[1]].name}?",
                     ):
                         self.figure.pokes[
-                            self.index[0] * self.columns + self.index[
-                                1]] = Poke(
-                            "__fallback__", 10, 0
-                        )
+                            self.index[0] * self.columns + self.index[1]
+                        ] = Poke("__fallback__", 10, 0)
                         self.pokes = self.figure.pokes[: len(self.pokes)]
-                        self.set_items(2,
-                                       [se.Text(p.name, state="float") for p in
-                                        self.pokes])
+                        self.set_items(
+                            2, [se.Text(p.name, state="float") for p in self.pokes]
+                        )
                         self.figure.balls_label_rechar()
                 else:
                     if action.triggers(Action.CANCEL):
