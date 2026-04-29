@@ -57,7 +57,6 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
   \_____/""")
         # visual objects
         self.frame_big = StdFrame(self.height - 5, self.width)
-        # self.frame_small = se.Frame(height=4, width=self.width, state="float")
         self.frame_small = StdFrame(4, width)
         self.e_underline = se.Text("─" * 16 + "┘", state="float")
         self.e_sideline = se.Square("│", 1, 3, state="float")
