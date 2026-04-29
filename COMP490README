@@ -1,0 +1,13 @@
+This README contains instructions for running the version of pokete
+we have been working on over the last few weeks. It is important that
+you do not follow the install instructions in the original README, as
+our changes have not all been pushed upstream.
+
+To install pokete with the changes we have made, do the following:
+    - Clone this repo https://github.com/squidaboni/COMP490_Final.git
+    - In a terminal, navigate to the project folder and run 'pip install -e'.
+    - To confirm you are running the forked version, run the command 'pip show pokete'.
+      If the 'Editable project location:' is a folder on your personal device, and does
+      not include 'site packages', then you are all set.
+    - To play the game, in your terminal run the command 'python -m pokete'.
+    - ...
