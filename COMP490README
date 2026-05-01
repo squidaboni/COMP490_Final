@@ -6,11 +6,13 @@ we have been working on over the last few weeks. It is important that
 you do not follow the install instructions in the original README, as
 our changes have not all been pushed upstream.
 
-To install pokete with the changes we have made, do the following:
-    - Clone this repo https://github.com/squidaboni/COMP490_Final.git
-    - In a terminal, navigate to the project folder and run 'pip install -e'.
-    - To confirm you are running the forked version, run the command 'pip show pokete'.
-      If the 'Editable project location:' is a folder on your personal device, and does
-      not include 'site packages', then you are all set.
-    - To play the game, in your terminal run the command 'python -m pokete'.
-    - ...
+Python3.12 and pip24.2 or newer are required.
+
+To install pokete with the changes we have made, in a terminal, do the following :
+    - Clone this repo into your desired directory:
+        'git clone https://github.com/squidaboni/COMP490_Final.git'
+    - Navigate into the project folder: cd ~/.../COMP490_Final
+    - Run the command: 'pip install -e .'
+    - To confirm you have installed the forked version, run the command 'pip show pokete'.
+      The field "Editable project location:" should match your working directory.
+    - To play the game, run the command 'python -m pokete' (or 'python3 -m pokete')
