@@ -24,6 +24,7 @@ def render_test_fightmap_chars(map_width, map_height):
     return list_all_map_chars
 
 
+# Test suite created using course approved AI tool MS Copilot
 class TestFightMap(unittest.TestCase):
     """Test suite for fightmap UI"""
 
