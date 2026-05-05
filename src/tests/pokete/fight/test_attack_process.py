@@ -32,7 +32,9 @@ stub_module("pokete.classes.attack", Attack=type("Attack", (), {}))
 stub_module("pokete.release", SPEED_OF_TIME=1)
 stub_module("pokete.classes.fight.providers", Provider=type("Provider", (), {}))
 stub_module("pokete.classes.fight.fightmap", FightMap=type("FightMap", (), {}))
-stub_module("pokete.classes.attack_actions", AttackActions=type("AttackActions", (), {}))
+stub_module(
+    "pokete.classes.attack_actions", AttackActions=type("AttackActions", (), {})
+)
 stub_module(
     "pokete.classes.effects",
     effects=SimpleNamespace(confusion=type("confusion", (), {})),
